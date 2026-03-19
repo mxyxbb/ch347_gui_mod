@@ -16,9 +16,9 @@
     	RetVal = CH347I2C_SetStretch(SpiI2cGpioDevIndex, TRUE);
     	DbgPrint("CH347 I2C set stetching %s",RetVal ? "succ" : "failure");
     
-    	// goodhead额外增加推挽输出模式的配置，默认为推挽输出模式。
-    	RetVal = CH347I2C_SetDriverMode(SpiI2cGpioDevIndex, 1);
-    	DbgPrint("CH347 I2C set push-pull %s", RetVal ? "succ" : "failure");
+    	// goodhead额外增加推挽输出模式的配置，默认为开漏输出模式。
+    	//RetVal = CH347I2C_SetDriverMode(SpiI2cGpioDevIndex, 1);
+    	//DbgPrint("CH347 I2C set push-pull %s", RetVal ? "succ" : "failure");
     
     	if (I2CDelayMs > 0)
     		RetVal = CH347I2C_SetDelaymS(SpiI2cGpioDevIndex, I2CDelayMs);
