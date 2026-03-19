@@ -178,8 +178,8 @@ BOOL CH347InitI2C()
 	RetVal = CH347I2C_SetStretch(SpiI2cGpioDevIndex, TRUE);
 	DbgPrint("CH347 I2C set stetching %s",RetVal ? "succ" : "failure");
 
-	RetVal = CH347I2C_SetDriverMode(SpiI2cGpioDevIndex, 1);
-	DbgPrint("CH347 I2C set push-pull %s", RetVal ? "succ" : "failure");
+	// RetVal = CH347I2C_SetDriverMode(SpiI2cGpioDevIndex, 1);
+	// DbgPrint("CH347 I2C set push-pull %s", RetVal ? "succ" : "failure");
 
 	if (I2CDelayMs > 0)
 		RetVal = CH347I2C_SetDelaymS(SpiI2cGpioDevIndex, I2CDelayMs);
